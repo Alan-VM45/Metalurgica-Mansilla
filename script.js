@@ -1,24 +1,29 @@
  AOS.init({ duration: 1000, once: true });
 
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
 
-    function mostrarSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) slide.classList.add('active');
-      });
-    }
+function mostrarSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
 
-    function moverSlide(direccion) {
-      currentIndex += direccion;
-      if (currentIndex < 0) currentIndex = slides.length - 1;
-      if (currentIndex >= slides.length) currentIndex = 0;
-      mostrarSlide(currentIndex);
-    }
+function moverSlide(direccion) {
+  currentIndex += direccion;
+  if (currentIndex < 0) currentIndex = slides.length - 1;
+  if (currentIndex >= slides.length) currentIndex = 0;
+  mostrarSlide(currentIndex);
+}
 
-    setInterval(() => moverSlide(1), 5000);
-    mostrarSlide(currentIndex);
+// Cambio automático cada 5 segundos
+setInterval(() => moverSlide(1), 5000);
+
+// Inicial
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarSlide(currentIndex);
+});
 
     let carrito = [];
     const listaCarrito = document.getElementById("lista-carrito");
