@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aberturas Mansilla</title>
+  <!-- AOS Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header data-aos="fade-down">
+    <div class="top-bar">
+      <h1>Aberturas Mansilla</h1>
+      <button class="btn" onclick="toggleCarrito()">🛒 Ver carrito</button>
+    </div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Puertas</a>
+      <a href="#">Ventanas</a>
+      <a href="#">Portones</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <aside class="carrito" id="carrito" data-aos="fade-left">
+    <button class="cerrar-carrito" onclick="cerrarCarrito()">✖</button>
+    <h2>🛒 Tu carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total: $<span id="total">0</span></strong></p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  </aside>
+
+  <section class="slider" data-aos="fade">
+    <div class="slides">
+      <div class="slide active"><img src="https://via.placeholder.com/1200x400?text=ABERTURA+1" alt="Abertura 1"></div>
+      <div class="slide"><img src="https://via.placeholder.com/1200x400?text=ABERTURA+2" alt="Abertura 2"></div>
+      <div class="slide"><img src="https://via.placeholder.com/1200x400?text=ABERTURA+3" alt="Abertura 3"></div>
+    </div>
+    <button class="prev" onclick="moverSlide(-1)">❮</button>
+    <button class="next" onclick="moverSlide(1)">❯</button>
+  </section>
+
+  <section class="catalogo-section" data-aos="fade-up">
+    <h2>Productos Destacados</h2>
+    <div class="catalogo">
+      <div class="producto" data-aos="zoom-in">
+        <img src="https://via.placeholder.com/300x180/1a2c48/f7f5f2?text=Puerta+de+Chapa" alt="Puerta" />
+        <h3>Puerta de chapa reforzada</h3>
+        <span>$85.000</span>
+        <button class="btn" onclick="agregarAlCarrito('Puerta de chapa reforzada', 85000)">Agregar al carrito</button>
+      </div>
+      <div class="producto" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://via.placeholder.com/300x180/1a2c48/f7f5f2?text=Ventana+de+Aluminio" alt="Ventana" />
+        <h3>Ventana de aluminio corrediza</h3>
+        <span>$65.000</span>
+        <button class="btn" onclick="agregarAlCarrito('Ventana de aluminio', 65000)">Agregar al carrito</button>
+      </div>
+      <div class="producto" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://via.placeholder.com/300x180/1a2c48/f7f5f2?text=Porton+Doble" alt="Portón" />
+        <h3>Portón doble hoja</h3>
+        <span>$120.000</span>
+        <button class="btn" onclick="agregarAlCarrito('Portón doble hoja', 120000)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="ver-mas">
+      <button class="btn">Más productos</button>
+    </div>
+  </section>
+
+  <section class="contacto-section" id="contacto">
+    <h2>Contacto</h2>
+    <form class="contacto-form" action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <div data-aos="fade-up" data-aos-delay="100">
+      <h4>Aberturas Mansilla</h4>
+      <p>© 2025. Todos los derechos reservados.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="300">
+      <h4>Redes</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
