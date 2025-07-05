@@ -35,9 +35,7 @@
   <div class="slides">
     <div class="slide active">
       <img src="img/img1.jpeg" alt="Abertura 1">
-      <div class="frase">Calidad que resiste el paso del tiempo</div>
-    </div>
-    <div class="slide">
+      <div class="frase">Calidad que resiste el paso del tiempo</div> <div class="slide">
       <img src="img/img2.jpeg" alt="Abertura 2">
       <div class="frase">Diseño y seguridad en cada abertura</div>
     </div>
@@ -49,6 +47,8 @@
       <img src="img/img4.jpg" alt="Abertura 4">
       <div class="frase">La confianza se forja en acero</div>
     </div>
+    </div>
+   
   </div>
   <button class="prev" onclick="moverSlide(-1)">❮</button>
   <button class="next" onclick="moverSlide(1)">❯</button>
@@ -133,11 +133,9 @@
       </ul>
     </div>
   </footer>
-
-  
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-   <script src="script.js"></script>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script src="script.js"></script>
 </body>
 </html>
